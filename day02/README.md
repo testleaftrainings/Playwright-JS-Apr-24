@@ -1,17 +1,9 @@
-📑 *Agenda for Day 02: String & Arrays in JavaScript*
+📑 *Agenda for Day 02*
 
-📌 2.15 PM: Recap
-📌 2.30 PM: Operators & Conditional Statements
-📌 3.15 PM: [Practice]
-📌 3.30 PM: Looping
-📌 4.00 PM: [Break/Practice]
-📌 4.15 PM: String
-📌 4.45 PM: [Practice]
-📌 5.00 PM: Arrays
-📌 5.30 PM: [Practice]
-📌 5.45 PM: Functions
-📌 6.15 PM: [Practice]
-📌 6.30 PM: Wrap & Assignments
+📌 Operators 
+📌 Conditional Statements
+📌 Looping Statements
+📌 String
 
 ## Operators
 
