@@ -1,0 +1,171 @@
+Operators
+1. Arithmetic Operators
+    - Addition --> +
+    let a = 5, b =10;
+    let sum = a+b;
+    - Subtraction --> -
+    let a = 5, b =10;
+    let result = a-b;
+    - Multiplication
+    let a = 10;
+    let b = 5;
+    let result = a * b;
+    console.log(result); //50
+    - Division
+    let a = 10;
+    let b = 5;
+    let result = a / b; //quotient - 2
+    - Modulus
+    let a = 10;
+    let b = 3;
+    let result = a % b; //remainder = 1
+    - Increment --> ++
+
+    - Decrement --> --
+2. Assignment Operators
+    - Equal to =
+    add and assign
+    +=, -=, *=, /=, %=
+    let x = 10;
+    x+=5 //same as x = x + 5
+    console.log(x); //15
+
+3. Comparison Operators - boolean (true/false)
+    Strict equal, non-strict equality
+    !=, >,<,>=,<=
+    5!=5    false
+    6>5 true
+    6>=5 true
+
+4. Logical Operators
+
+    && - logical AND
+    let val1 = true, val2 = false
+    val1 && val2 --> false
+    true && true = true
+    true && false = false
+    false && true = false
+    false && false = false
+
+    || Logical OR
+    true || true = true
+    true || false = true
+    false || true = true
+    false || false = false
+
+    Logical Not ! 
+    !val1 --> false
+
+
+Conditional Statements
+ perform actions based on the conditions
+
+ -if else
+ Syntax:
+    if(condition){
+
+       //Code is executed if the condition is true
+
+    } else {
+    
+        //Code is executed if the condition is false
+
+    }
+
+
+ -if else if
+    Number = 0 //Positive or negative
+    number>0 Positive
+    number<0 Negative
+    number=0 Neutral
+
+    if (condition){
+
+        //Code is executed if the condition is true
+
+    } else if (condition){
+
+        //Code is executed if the condition is true 
+    
+    } else (condition 1 and condition 2 are false){
+
+        //Code is executed if the conditions are false
+
+    }
+
+ -switch case
+    alternative to if else if
+    multiple conditions
+
+switch(expression){
+    case x:
+        //Code block
+        break;
+    case y:
+        //Code block
+        break;
+    
+    default:
+        //Code block
+
+}
+
+Looping Statements
+    used to execute a block of code repeatedly, until the
+    condition is failed
+
+for loop
+
+for(initilization; condition; increment){
+
+
+}
+
+while loop
+    execute the block as long as specified condition is true
+    checks the condition first, 
+        only if it is true, while block is executed
+        if the condition is failed, it will never execute the block
+
+while(condition){
+
+    //Code to be executed
+
+}
+
+do while loop
+
+execute code block at least one time
+After doing the task at least one time, it will check the condition
+
+do{
+    //Code block
+
+}while(condition)
+
+Pagination - collecting data from different pages
+
+while(next button is enabled){
+    //Collect the data from the page
+}
+
+do{
+    //Collect the data from the page
+}while(next button is enabled)
+
+
+string
+
+- primitive data type use to hold a sequence of characters
+- There are two ways to declare a string
+    1. String literal
+    let username = "Remya";
+    let username = 'Ramya'
+    let username = `Ramya`
+    Use double quotes, single quote or backticks ` to define a string
+
+    2. String object
+    let username = new String("Divya")
+     let username = new String("Divya")
+  
+  
