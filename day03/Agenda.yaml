@@ -1,0 +1,93 @@
+Day:03 [Saturday]
+ 
+Agenda: Get Started with Playwright
+
+# 2.15 PM - Recap on JavaScript Fundamentals
+# 2.45 PM - String Methods
+# 3.15 PM - [Practice]
+# 3.30 PM - Understanding Playwright Architecture 
+# 4.15 PM - Key Browser, Context, Page
+# 4.45 PM - [Break]
+# 5.00 PM - Code your basic first test script
+# 5.30 PM - [Practice]
+# 5.45 PM - Understanding DOM
+# 6.00 PM - Locators / Selectors [CSS & Playwright getBys]
+# 6.30 PM - Q&A / Wrap
+
+
+Scoping
+  1. Global
+  2. Function
+  3. Block
+
+let numbers = 10;       //global scoped 
+  function printNum(){
+     let printStatemet = "Hi"; //function scoped
+     if(){
+      let result = printStatement.join(); //block scoped
+
+     }
+    result --> undefined
+
+  }
+  
+
+  let password = "Testleaf@123"  //String literal
+
+  let password = new String("Testleaf@123") //String Object
+
+
+  let courseName = "P l a y w r i g h t"
+  Length            1 2 3 4 5 6 7 8 9 10
+  Index             0 1 2 3 4 5 6 7 8 9 
+   courseName.length --> 10
+   courseName.charAt(courseName.length-2)
+   last index --> length-1
+
+   Testleaf
+   .slice(-3)    //eaf
+   .slice(start index, end index)
+   swapping is not possible --> returns an empty string when start index > end index
+   .substring(-3) --> treats the negative value as 0
+   .substring(0)
+   .substring(3, 0) --> swaps the values
+   Testleaf
+
+   Playwright Architecture
+
+   Web automation tools
+      1. Selenium
+      2. Puppeteer
+      3. Cypress
+      4. webdriverIO
+
+
+  Playwright uses Websockets
+    - duplex communication (bidirectional)
+    - requests and responses are sent on the same connection
+
+Playwright uses browser specific protocol
+Chromium - CDP (Chrome DevTools Protocol)
+Chromium - base architecture 
+Edge - Chromium 
+Firefox - Firefox Remote Protocol
+Webkit - Webkit Remote Debugging Protocol
+
+Selenium 
+IDE --> ChromeDriver --> Chrome
+
+Playwright 
+IDE --> CDP --> Chrome
+
+                    Se                    Playwright
+
+ Protocol        WebDriver               Browser specific protocols
+ Connection       HTTP/HTTPS              Websockets
+                  synchronous             asynchronous
+                  multiple languages      Node.js, Java, C#, Python
+                                          chromium, firefox, webkit
+                  Drivers                 Direct browser communication
+                                          Parallel testing (simple)
+                                          single API
+
+
