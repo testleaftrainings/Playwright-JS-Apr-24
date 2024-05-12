@@ -1,0 +1,130 @@
+Browser
+  - a browser instance 
+  - Within the same browser instance, it can contain multiple browser contexts
+Different browsers
+  Chromium - Chrome & Edge
+    chromium.launch()
+  Firefox
+    firefox.launch() --> Nightly browser
+  Safari
+    safari.launch()
+
+Browser Context
+  - an isolated environment within the browser instance
+  - akin to incognito session but it is more powerful
+  - operates independently with its own cookies, local storage, and cache
+  - making it possible to run tests in parallel without any shared state
+
+Page
+  - an individual tab or a window within a browser context
+  - helps to interact with the web elements
+
+
+  async function printUserName(){
+
+    return "Hi, Venkatesh"
+  }
+
+  async printUserName() => return "Hi, Venkatesh"
+
+  Promise -> 1. Fulfill   2. Reject
+
+  await --> waiting for the promise to be resolved
+  To execute the Playwright test
+  npx playwright test filename.spec.ts
+
+  Configuration settings
+      1. playwright.config.ts - it is applicable for all the spec files present inside
+                                the tests folder
+          use:{
+            headless: true
+          }
+          You need to run the test files from the root directory/from the place where
+          your config file is present
+
+      2. test script - it is applicable only for that particular test
+        eg. launch({timeout:5000, headless:false, channel:'chrome'})
+
+      3. CLI - this is also applicable for that test
+          npx playwright test --headed
+
+
+Understanding DOM
+Document Object Model
+
+  ctrl+shift+I
+  Right click on the web element--> choose Inspect
+  Click the 3 dots on the browser --> More Tools --> Developer Tools
+
+  Basics of HTML
+
+  <html>
+  <head> 
+      <title> Leftaps </title>
+  <body>
+  <div> <p> <span>
+      <form>
+      <label> Username </label>
+      <input id=username class=textbox> </input>
+      </form>
+    </body>
+    </head>
+    </html>
+
+
+<input class="inputLogin" type="password" id="password" name="PASSWORD" size="50">
+
+tagname - input
+
+attributes - class, type, id, name, size
+
+attribute value
+  class = inputLogin
+  type = password
+  id = password
+
+  First preference --> id attribute --> unique
+  id = username
+  <a href="/crmsfa/control/leadsMain" id="ext-gen629">Leads</a>
+  <a href="/crmsfa/control/leadsMain" id="ext-gen592">Leads</a>
+
+  class
+  name
+  text
+  linktext
+
+Locator Strategies
+
+  1. Playwright Locators
+
+      page.getByRole() - to locate a web element by its role (button, link, checkbox)
+      page.getByText() - to locate a web element by text content
+      page.getByLabel() - to locate a web element by the label's text
+      page.getByPlaceholder() - to locate an input by placeholder
+      page.getByAltText() - to locate a web element by its text alternative
+      page.getByTitle() - to locate a web element by its title attribute 
+      <span title = "Sign In">
+      page.getByTestId() - to locate a web element based on its data-testId attribute
+
+  2. CSS or XPath
+  Basic CSS locators
+    - By id 
+    #idValue
+    [id = 'username']
+    - By class
+    .classValue
+    [class = 'decorativeSubmit']
+    - By attribute 
+    - name
+    [name = 'Username']
+    - type
+    [type = 'submit']
+    - By tagName
+    tagname[attribute = value]
+
+
+
+
+Actions that you have to interact with the web element
+
+click, enter the text, select a value, get the text
