@@ -1,6 +1,6 @@
 ## Agenda: Dig deeper into Playwright
 
-# Understanding Browser, Context, and Pages
+# Understanding Browser, Context, and Page
 
 In Playwright, automation is structured around three key objects: Browser, Context, and Pages, each serving distinct roles in the automation workflow.
 
@@ -11,7 +11,7 @@ Represents an instance of a web browser. Playwright can control multiple Browser
 ## Context
 A Browser Context simulates an incognito session, allowing for parallel tests in a single Browser instance without shared cookies, localStorage, or session data.
 
-## Pages
+## Page
 
 A Page object represents a single browser tab or window, serving as the primary interface for web content interaction, including navigation and element manipulation.
 
