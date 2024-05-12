@@ -1,4 +1,4 @@
-## Agenda: Get Started with Playwright
+## Agenda: Dig deeper into Playwright
 
 # Understanding Browser, Context, and Pages
 
