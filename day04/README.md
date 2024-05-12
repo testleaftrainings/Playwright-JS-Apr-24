@@ -17,11 +17,11 @@ A Page object represents a single browser tab or window, serving as the primary 
 
 # Playwright Locators
 
-     - page.getByRole() - to locate a web element by its role (button, link, checkbox)
-     - page.getByText() - to locate a web element by text content
-     - page.getByLabel() - to locate a web element by the label's text
-     - page.getByPlaceholder() - to locate an input by placeholder
-     - page.getByAltText() - to locate a web element by its text alternative
-     - page.getByTitle() - to locate a web element by its title attribute 
+- *page.getByRole()* - to locate a web element by its role (button, link, checkbox)
+- *page.getByText()* - to locate a web element by text content
+- *page.getByLabel()* - to locate a web element by the label's text
+- *page.getByPlaceholder()* - to locate an input by placeholder
+- *page.getByAltText()* - to locate a web element by its text alternative
+- *page.getByTitle()* - to locate a web element by its title attribute 
       <span title = "Sign In">
-     - page.getByTestId() - to locate a web element based on its data-testId attribute
+- *page.getByTestId()* - to locate a web element based on its data-testId attribute
