@@ -1,0 +1,95 @@
+CSS
+1. id - #username
+2. class - .decorativeSubmit
+<input  type="password" size="50">
+3. attribute - [attribute = "value"]
+  [type = "password"]
+4. By tagname
+  tagname[attribute = 'value']
+  input[type="password"]
+
+5. To find an element where the class value starts with a particular string
+    tagname[attribute^='value']
+    div[class^='inventory_item']
+
+    class='inventory_item'
+    class='inventory_item_price'
+    class='inventory_item_label'
+    class='inventory_item_img'
+
+6. To find an element where the class value ends with a particular string
+    tagname[attribute$='value']
+    div[class$='btn_inventory']
+
+  Example: class = 'btn_bags btn_inventory'
+          class = btn_addToCart btn_inventory
+          class = btn_checkout btn_inventory
+
+7. Parent Child
+  parent > child
+  form>p
+
+8. ancestor descendant - selects all the descendant elements
+  ancestor descendant
+  p label
+  p input
+
+9. Adjacent sibling - slects the next sibling element
+  element + element
+  p[class='top']+p
+
+10. General sibling or if you want select all the siblings after a specified element
+  element ~ element
+  p[class='top']~p
+
+11. To find an element where class contains a substring --> contains
+    tagname[attribute*="value"]
+    button[class*="btn"]
+
+Filtering mechanisms
+  When you have multiple matches
+    1. nth(0) - locates the first match
+    page.locator(".slds-truncate").nth(0).click();
+    list of elements less than 5
+
+    2. first() - locates first matching element
+    page.locator(".slds-truncate").first().click();
+
+    3. last() - to select the last matching element in the list
+      page.locator(".slds-truncate").last().click();
+
+    4. filter()
+    page.locator(".slds-truncate").filter({hasText})
+    hasText
+    hasNotText - 75%
+    has
+    hasNot
+
+To retrieve any text - innerText() and textContent()
+
+XPath - XML Path Language
+1. Absolute Xpath - starts from the root 
+                    traverse through all the path - /head/body/div[2]/form/p
+2. Relative XPath - starts from the current - //
+
+Locating the elements
+  locator and selector
+Assertions
+Auto Waits
+
+
+Arrays in JS
+
+let username = 'swamy'
+
+Store the multiple values inside a var - arrays
+
+Creating an Array
+
+  1. Using Array Literal
+      let userProfiles = ['swamy', 'Dilesh', 'Vinoth', 'Ramya']
+  2. Using the Array constructor
+        let userProfiles = new Array('swamy', 'Dilesh', 'Vinoth', 'Ramya')
+
+
+
