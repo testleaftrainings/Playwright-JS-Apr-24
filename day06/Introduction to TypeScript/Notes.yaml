@@ -1,0 +1,29 @@
+TypeScript Introduction
+
+    - strict type check
+    - superset of JavaScript
+    - browsers directly do not support TypeScript
+    - tsc --> transcompile the ts code to js code before execution
+    - statically typed (compile time error)
+      JS- dynamically (run time error)
+    - enhanced OOPs features 
+    - Angular framework 
+
+TypeScript Installation
+
+npm install -g typescript (global installation)
+npm install typescript (local installation) - different versions of TS
+
+tsc -v
+tsc --version
+
+To get the configuration file --> tsc --init
+
+.ts file --> TypeScript Compiler (tsc) --> .js --> code executes
+
+To run the ts file
+  compile using tsc filename.ts
+  run the file using node filename.js
+
+
+

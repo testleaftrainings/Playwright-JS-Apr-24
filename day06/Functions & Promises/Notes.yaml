@@ -1,0 +1,153 @@
+Function 
+1. Named Function
+    - Function Declaration
+        >> function declared using the 'function' keyword with a name
+        function addNum(){
+          //Block of code
+        }
+        addNum();
+
+    - Named Function Expressions
+        > assigned to a variable with a function name (reusability)
+        const addition = function addNum(){
+
+          //Code block
+        }
+2. Anonymous function
+    - Anonymous function expressions
+    > assigned to a variable without a name
+        const anonymousFunc = function (){
+
+          //Code block
+        }
+
+    - Arrow Functions
+    > shorter syntax for the functions
+    > always anonymous, use =>
+        const arrowFunc = () =>{
+            //Code block
+        }
+      const arrowFunc = () => return a+b;
+      test(`title`, async () =>{
+
+
+      })
+
+3. Special Categories
+    - Async Functions (handle asynchronous operations)
+      async function getTitle(){
+        await
+      }
+    - Immediately Invoked Function Expressions (IIFE)
+      > execute immediately after they are defined
+      function (){
+
+      }();
+
+    - Higher Order Functions 
+      > Callback function (a function is passed as a parameter to another function)
+
+        function funcName(callback){
+
+          callback();
+        }
+        getMessage(){
+
+        }
+
+
+function processUserInput(callback){
+    let name = prompt("Please enter your name");
+    callback(name); //displayName(name);
+    
+}
+
+function displayName(name){
+    alert("Hello " + name);
+}
+
+//Calling the function
+processUserInput(displayName);
+
+1. processUserInput(displayName) is loaded into the memory
+
+2. processUserInput function is defined
+    callback as an argument
+    JS will understand that displayName is the callback function
+    Gets into the code block and reads the code
+      let name = prompt("Please enter your name");
+      //Trigger a prompt alert with a message Please enter your name
+      //User will enter the name and clicks Ok
+    Reads callback(name); //displayName(name)
+
+3. function displayName(name)
+    Read  alert("Hello " + name);
+      //Triggers an alert with the username
+
+
+test(`Test to get the title of the page`, async () => {
+
+    const browser =  await chromium.launch();
+
+
+
+} )
+
+async function fetchPageTitle(url, callback){
+
+  const browser = await chromium.launch();
+  const browserContext = await browser.newContext();
+  const page = await browserContext.newPage();
+  await page.goto(url);
+  const title = await page.title();
+  callback(title); //Using callback to handle the title
+  await browser.close();
+}
+
+//Define the callback function
+function getTitle(title){
+  console.log(`The title of the page is ${title}`);
+}
+
+fetchPageTitle('amazon.in', getTitle)
+
+
+Callback hell
+fetchData('amazon.in', function(data1){
+  console.log(data1);
+  fetchData('amzon.in/profile', function(data2){
+    console.log(data2)
+    fetchData('amazon.in/profile/settings', function(data3){
+      console.log(data3)
+
+    })
+  })
+})
+
+Promise
+  - eventual completion or failure of an asynchronous operation
+
+Lifecycle of a Promise
+  - 3 states
+    > Pending - initial state of a promise
+    > Fulfilled (with a value) - represents a successful operation
+    > Rejected (with a reason) - represents a failed operation
+
+Consuming Promises 
+  - then() and catch()
+  then(onFulfilled, onRejected)
+  then(undefined, onRejected)
+  - catch(onRejected)
+
+  Object Literals
+
+  user = {
+    id: 44,
+    name:
+    "Jothish"
+    age: 25
+  }
+
+  user.name
+  user.id
+  user.age
