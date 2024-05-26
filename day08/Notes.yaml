@@ -1,0 +1,107 @@
+Selectors & Locators
+
+Selector - a string that identifies the element in the DOM.
+page.fill("#username", "demosalesmanager")
+page.click(".decorativeSubmit")
+
+1. Chaining operations cannot be done
+2. simple and straightforward approach
+3. Auto waiting - explicit waits- waitForSelector, waitForTimeout
+page.waitForSelector("#username");
+page.fill("#username", "demosalesmanager")
+
+Locator
+page.locator("//input[@class='decorativeSubmit']").fill("Demosalesmanager")
+page.locator(".decorativeSubmit").click();
+
+1. Chaining of operations - click, fill
+page.locator("").fill("").click()
+2. lot of Locator APIs
+3. Auto waiting - automatic retries 
+
+Fixtures
+Setup
+- helps to initialize the environment in which the tests will run
+- isolated environment
+- provides a new incognito session
+Teardown
+- clean up the resources
+
+test.beforeEach()
+{
+  launch
+  browser context
+  new page
+  navigating to the url
+  username
+  password
+  login
+
+
+}
+
+test.use()
+test.beforeEach(){
+  Login scenario
+}
+test 1 - Create Lead Test
+test 2 -  Edit Lead
+test 3
+
+Handling dropdown using <select>
+selectOptions
+  - by value
+  - by the visible text
+  - by index
+
+  forbidOnly: !!process.env.CI --> true or"1" !!true -> true
+  ! - logical NOt
+  !false - true
+  !!false - false
+  truthy and falsy -0, null 
+  "hello" - true
+  Boolean("hello") - true
+
+  retries: process.env.CI ? 0 : 2,
+  ? ternary operator
+  retries: condition ? IfTrue : IfFalse
+
+  retries: 2
+  fullyParallel: true
+  workers: 1
+
+
+  test.only(`Create a Lead){
+
+
+  }
+
+  test("Edit a lead"){
+
+
+  }
+  test("Delete a lead"){
+
+
+  }
+
+  Assertions
+
+  1. expect library
+  2. timeout: 5s
+
+  Retrying mechanisms
+    1. Auto-retrying assertions
+      Visibility
+      await expect(locator).toBeHidden();
+      await expect(locator).toContainText("Lead")
+    2. Non-retrying assertions
+      expect(value).toBe()
+
+  15s
+  polling interval
+  0.5s 
+  0.5s 
+
+  expect(value).not.toEqual(0);
+await expect(locator).not.toContainText('70% offer on fastrack bags');
