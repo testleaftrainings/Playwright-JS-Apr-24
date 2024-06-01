@@ -1,0 +1,114 @@
+Types of Assertion
+
+  1. Generic Assertions
+  2. Locator Assertions
+  3. Page Assertions
+  4. Snapshot Assertions
+  5. API Reference Assertions
+
+  value = 1
+  expect(value).toBe(2)
+
+  expect([1,2,3,4]).toEqual(expect.arrayContaining([3,1,6]))
+
+  toBe and toEqual
+
+
+  toBe - strict equality (primitive)
+  Compares the references of object and arrays
+  Assertion will if you have different references with the identical content
+  expect(1).toBe(1)
+  expect(true).toBe(true)
+
+  const arr = [1,2,3];
+  expect(arr).toBe(arr); --> arr === arr 
+
+  expect(arr).toBe([1,2,3]) 
+
+  const obj = {a:1}
+  expect(obj).toBe({a:1})
+
+  toEqual - compare arrays or objects
+  Compare the contents of the objects and arrays
+
+  Retrying and Non-retry assertion
+
+  Auto retry
+
+      .toBeEnabled()
+    polling mechanism
+    15 s
+    0.5
+    0.5
+    0.5
+
+    15s
+
+    Non retry - no in-built retry mechanism
+    toBe
+    expect("hello").toBe("helloTestleaf")
+
+    Hard Assertion
+      - if the assertion is failed, it will halt the execution of the test script
+    
+    Soft Assertion
+      - if the assertion is failed, it will allow the test to continue its execution
+
+Negating matchers
+expect(title).not.toBe("amazon.com")
+
+await expect(page.locator("button#submit")).not.toBeVisible();
+
+Auto-waiting
+Actionability Checks
+  1. Visibile on the page
+  2. Stable
+  3. receive events 
+  4. enabled
+  5. editable
+
+await page.locator("input#j_idt88:name").fill("Testleaf")
+
+Alert
+
+1. Modal Dialog
+    - you cannot inspect the alert
+    1. Simple Alert
+        
+        a message + Ok button
+        accept the alert
+
+    2. Confirm Alert
+
+        a message + OK / Cancel
+        accept the alert / dismiss the alert
+
+    3. Prompt Alert
+
+        a message + Prompt text box + Ok / Cancel
+        enter the input and accept the alert
+        dismiss the alert
+
+    4. BeforeUnload Alert
+
+        message + Leave / Stay
+        accept the alert / dismiss the alert
+
+2. Non-modal dialog
+
+    Sweet alert - can be inspected 
+
+
+Methods 
+
+  1. accept("Ranjini") - to accept the alert
+  2. dismiss() - to cancel the alert
+  3. message() - return the message displayed 
+  4. type() - return the type of the dialog
+    if(dialog.type()==="simple"){
+      dialog.accept();
+    }
+  5. defaultValue() - returns the default value of the prompt dialog
+  
+
+  Playwright auto-dismisses the dialogs by default
