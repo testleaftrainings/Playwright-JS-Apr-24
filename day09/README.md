@@ -9,20 +9,6 @@
 - [Event Listeners for Dialogs](#event-listeners-for-dialogs)
 - [Handling Dialogs: `page.on` vs `page.once`](#handling-dialogs-pageon-vs-pageonce)
 
-## Select Dropdowns
-
-Playwright provides methods to interact with `<select>` dropdowns by value, label, or index:
-
-```javascript
-// Select by value
-await page.selectOption('select#yourSelectId', { value: 'optionValue' });
-
-// Select by label
-await page.selectOption('select#yourSelectId', { label: 'Option Label' });
-
-// Select by index
-await page.selectOption('select#yourSelectId', { index: 0 });
-```
 
 ## Auto-Waiting Mechanism
 
