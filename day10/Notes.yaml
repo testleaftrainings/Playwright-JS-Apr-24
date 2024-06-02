@@ -1,0 +1,53 @@
+Frames
+
+frame - used before HTML 5
+depricated
+static contents
+
+<frameset>
+  <frame>
+  <p>
+  <img>
+  </frame>
+</frameset>
+
+<frameset>
+
+
+<iframe> inline frame 
+modern web applications
+one html doc embedded into another html
+supports multimedia contents - video, ad
+  <html>
+  <head>
+  <body>
+    <a> 
+
+page.frame 
+  1. By id or name
+  2. By url
+  3. By index
+  const frame1 = page.frame("");
+  const frame2 = frame1.frame("")
+  const frame3 = frame2.frame("")
+
+  or
+page.frameLocator - complex scenarios/ nested frames
+supports chaining operations
+page.frameLocator("frame1").("frame2").(frame3)
+
+main frame 
+Actual frame count = Total count - 1 (main frame)
+
+browser context
+
+Handling Windows
+1. Sequential
+2. Parallel/Concurrent
+
+Promise.all= [Promise1, Promise2]  --> single promise --> fulfilled
+Even if any one promise is failed, it will reject the promise 
+
+Promise1 - wait for the event - new window
+Promise2 - click open button
+Promise[newWindow]
