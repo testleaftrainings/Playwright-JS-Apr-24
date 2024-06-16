@@ -8,6 +8,11 @@ This guide outlines how to efficiently read data from various sources such as JS
 - [Environment Variables (ENV)](#environment-variables-env)
 - [Video Capture](#video-capture)
 - [Tracing](#tracing)
+- [Download Event and suggestedFilename](#download-event-and-suggestedfilename)
+  - [Example](#example)
+- [Saving the Downloaded File](#saving-the-downloaded-file)
+  - [Example](#saving-the-downloaded-file-example)
+
 
 ## JSON
 
@@ -136,4 +141,40 @@ dotenv.config();
 const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
 ```
+## File Downloads with Playwright
+
+Automating file downloads ensures the correct handling of files from web applications. This guide covers managing the download process and saving the downloaded files to a specific location using Playwright.
+
+### Download Event and suggestedFilename
+
+To manage the download process and retrieve the suggested filename, use the `download` event in combination with the `suggestedFilename()` method.
+
+### Example
+
+```javascript
+const fileDownloadPromise = page.waitForEvent('download');
+await page.getByRole('button', {name:'Download'}).click();
+const fileDownloader = await fileDownloadPromise;
+console.log('Suggested Filename:', download.suggestedFilename());
+```
+
+In this example, Playwright waits for the download event to be triggered by clicking on the download link. Once the download starts, it logs the suggested filename.
+
+### Saving the Downloaded File
+
+To save the downloaded file to a specific location, use the `download.path()` method along with the `saveAs()` method.
+
+### Example
+
+```javascript
+const path = await download.path();
+await download.saveAs('/path/to/save/file');
+```
+
+This example demonstrates how to retrieve the path of the downloaded file and save it to a specified location on your filesystem.
+
+## Final Notes
+
+- **Ensure Correct Paths**: Make sure the paths to save the files are correctly specified and that the application has the necessary permissions to write to those paths.
+- **Handling Multiple Downloads**: For handling multiple downloads, ensure each download event and file save operation is correctly awaited to avoid conflicts.
 
