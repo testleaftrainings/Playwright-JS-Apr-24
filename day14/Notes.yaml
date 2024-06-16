@@ -1,0 +1,129 @@
+Selenium - sukgu
+driver.find
+Shadow ele = new Shadow();
+ele.findByXpath
+
+1. Playwright pierces the shadow root and it can locate the elements present inside the shadow root
+2. Playwright doesn't penetrate the shadow root when xpath used
+    in-built locators, css
+
+
+Playwright Test Runner
+
+Test Structure
+  Hooks
+  test.describe.configure(mode: parallel)
+  test.info()
+
+
+  test.describe() - groups related tests
+
+Amazon app
+  Login Test          test.describe.only('Login test functionality '){
+                            tags: '@smoke'
+
+                            test("valid User"){
+                            }
+
+                            test("Invalid User")
+  }
+
+  --grep "@smoke"
+      Valid user
+      Invalid user
+  Products
+      Men - 10
+      Women - 15
+      Kids - 12
+  Add to Cart
+  Payment
+  Logout
+
+
+test.beforeAll(){
+//setup
+// executed once before the test run starts
+database connections
+server
+}
+
+test.afterAll(){
+//terdown process
+//clear the database resources
+//executed once after all the tests are completed
+
+}
+test.beforeEach(){
+//executed before each test run
+//loading the url
+page.goto("")
+}
+
+test.afterEach(){
+//executed after each test 
+//close the context and browser
+page.close()
+context.close()
+}
+Login Test block test.decribe
+test A, B, C
+
+beforeAll
+  test A
+afterEach
+
+beforeEach
+  test B
+afteEach
+
+beforeEach
+  test C
+afterEach
+
+
+test.only 
+test.describe.only
+
+test.skip
+skips the particular test
+
+test.fail()
+test()
+
+Test A
+Test B test.fixme(){
+}
+Test C
+
+test.fixme()
+
+config - 40
+test.setTimeout(60000){
+page.lo
+}
+
+test.describe.skip{
+    Test A
+    Test B
+    Test C
+
+}
+
+
+test.info()
+
+test.step()
+test{
+  await test.step(`Login`, async()=>{
+  
+  })
+
+  test 
+  {
+    await test
+  }
+}
+
+
+test info
+
