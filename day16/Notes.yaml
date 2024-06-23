@@ -1,0 +1,105 @@
+Class
+  - blueprint 
+
+Car - honda
+  color
+  model
+  no.of seats
+
+  automaticDriving
+  fuel
+  speed
+
+instances of Car class - using objects
+  color - white , brown, blue, black
+  model - city, amaze, venue
+  no.of seats - 5, 6, 8
+
+
+function - independent of the class
+async function setup(){
+
+}
+
+method - dependent on the class
+class LoginPage {
+
+//access modifier async methodName (){
+
+}
+  setup(){
+  }
+}
+
+Access Modifiers - scope of visibility of a method/property
+
+    1. public - default access modifier
+    userNameInput: string
+
+    2. private
+    class LoginPage {
+      private usernameInput: string
+
+      private async doLogin(){
+      
+      }
+    }
+
+    class HomePage extends LoginPage {
+
+    }
+    
+    3. protected - inheritance
+
+    class Login {
+      protected usernameInput: string
+      private password;
+      protected async doLogin(){
+      
+      }
+
+      async navigate()
+    }
+
+    class HomePage extends Login {
+      can access usernameInput, doLogin
+      can't access password
+    }
+
+  class ProductPage {
+    cannot access the usernameInput and do Login 
+  }
+
+  public - can be accessed anywhere (outside the class/ from any class)
+  private - can be accessed only within the class (even a derived class/ a child class cannot access)
+  protected - can be accessed only by the dervided/child class
+
+  readonly username = 'ranjini.r@testleaf.com' (strictly immutable)
+  private username = 'ranjini.r@testleaf.com' (visibility, can change the value)
+
+
+  Inheritance
+    Base Class
+      setup()
+      teardown()
+    class LoginPage extends  BaseClass {
+    
+    }
+
+    1. single inheritance
+    LoginPage extends BasePage
+    2. multilevel inheritance
+
+    DashboardPage extends LoginPage 
+    LoginPage extends BaseClass
+
+    BaseClass -> LoginPage -> DashboardPage
+
+    3. hybrid inheritance
+    combination of different inheritance types
+
+    4. multiple inheritance
+    BasePage class-1    LoginPage class-2
+          DashboardPage extends BasePage , loginPage (not possible)
+
+
