@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "442416bb-f90d-4cc7-9b0b-2ed05953d6f9",
+		"name": "JIRA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28988315",
+		"_collection_link": "https://solar-space-220954.postman.co/workspace/PW_API~2c83a84c-94f6-466c-996d-ae99b6626e8d/collection/28988315-442416bb-f90d-4cc7-9b0b-2ed05953d6f9?action=share&source=collection_link&creator=28988315"
+	},
+	"item": [
+		{
+			"name": "Create an issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF03nJxDeQruwvQmo3j0eLnp9xOTIKQPtOsCT7jJJFDMMJLE1B4uJ67ZPlCbb8-CWZh19SiRfj8eq-tOWVnmauIFJ-yifW1w0ZTulh3AztFurS9TyRFLwdmSXfuls_O0gKOMlpNOqvamp0uRoTIgliwUnsHRapFO1i-YvGfOJ8V8Tk=8BC2A3DC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "subraja.sivathanu@qeagle.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"project\": {\r\n            \"key\": \"SAL\"\r\n        },\r\n        \"summary\": \"New defect from Divya Keerthi using Postman\",\r\n        \"description\": \"Creating an issue using project keys and issue type names using the REST API\",\r\n        \"issuetype\": {\r\n            \"name\": \"Bug\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://project-practise.atlassian.net/rest/api/2/issue/",
+					"protocol": "https",
+					"host": [
+						"project-practise",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
